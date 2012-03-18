@@ -13,8 +13,10 @@ describe("Tracks Ordering Widget", function () {
 		submitButton.click();
 		var json = $.parseJSON(output.text());
 	
-        expect(json[0].name).toEqual('blah');
-        expect(json[0].sequenceNumber).toEqual(1);
+        expect(json[0].name).toEqual('Leave Home');
+        expect(json[0].sequeceNumber).toEqual(0);
+        expect(json[1].name).toEqual('In Dust We Trust');
+        expect(json[1].sequeceNumber).toEqual(1);
     });
 	
 });

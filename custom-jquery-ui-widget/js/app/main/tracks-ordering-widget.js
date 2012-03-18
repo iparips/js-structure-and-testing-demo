@@ -18,7 +18,17 @@
         },
 		
 		_serialiseListingToJson: function() {
-			return [{ name: "blah", sequenceNumber: 1}, { name: "blah", sequenceNumber: 1} ];
+            var counter = 0;
+
+            return _.map($("li"), function(item) {
+                var name = $(item).text();
+                var sequenceNumber = counter++;
+
+                return {
+                    "name": name,
+                    "sequeceNumber": sequenceNumber
+                }
+            });
 		}
 
     });
